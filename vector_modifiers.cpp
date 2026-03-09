@@ -2,16 +2,23 @@
 using namespace std;
 int main()
 {
-    vector<int> v{1,2,3,4,5};
-    vector<int> v2;
-    v2 = v;
-    // for(int i =0;i<v2.size();i++)
-    // {
-    //     cout<< v2[i] << " ";
-    // }
-    for(int x : v2)
+    vector<int> v{1,2,3,100,5,2};
+    // vector<int> v2 = {100,200,300};
+    // v.insert(v.begin()+2,v2.begin(),v2.end());
+    auto it = find(v.begin(),v.end(),100);
+
+    if(it==v.end())
     {
-        cout<< x << " ";
+        cout << "Not found";
     }
+    else
+    {
+        cout << "Found";
+    }
+
+    // for(int x : v)
+    // {
+    //     cout<< x << " ";
+    // }
     return 0;
 }
